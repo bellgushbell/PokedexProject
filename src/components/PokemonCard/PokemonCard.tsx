@@ -30,8 +30,9 @@ const PokemonCard = ({ image, name, id, types }: PokemonCardProps) => {
                 </div>
 
                 <div className="flex gap-2 justify-end mt-[16px]">
-                    {types.map((item) => {
-                        return <span className={`badge-type-${item.type.name} px-[14px] capitalize py-1 rounded-[12px]`} > {item.type.name}</span>
+                    {types.map((item, index) => {
+
+                        return <span key={index} className={`badge-type-${item.type.name} px-[14px] capitalize py-1 rounded-[12px]`} > {item.type.name}</span>
                     })}
 
 

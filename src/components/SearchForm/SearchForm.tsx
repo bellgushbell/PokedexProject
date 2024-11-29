@@ -1,13 +1,24 @@
 
-import { generationList, typesList, sortList } from '@/utils/optionList'
+import { generationList, typesList } from '@/utils/optionList'
+// import { generationList, typesList, sortList } from '@/utils/optionList'
 import { useSearchForm } from './SearchForm.hook'
 
 
 function SearchForm() {
-    const { fieldKeyword, fieldGeneration, fieldSort, fieldType } =
-        useSearchForm()
+    const { fieldKeyword, fieldGeneration, fieldType } = useSearchForm()
+    // const { fieldKeyword, fieldGeneration, fieldSort, fieldType } = useSearchForm()
+    // console.log(fieldGeneration)
+    // console.log(fieldType)
+    // console.log(fieldSort)
+    // console.log(fieldKeyword)
+
+    // console.log(generationList)
+    // console.log(typesList)
+    // console.log(sortList)
+
+
     return (
-        <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-[20px]">
+        <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] ">
 
             <div>
                 <label
@@ -44,7 +55,7 @@ function SearchForm() {
                     })}
                 </select>
             </div>
-            <div>
+            {/* <div>
                 <label
                     htmlFor="sort"
                     className="block mb-2 text-mb font-medium text-white">
@@ -58,13 +69,13 @@ function SearchForm() {
                         return <option className="capitalize" key={`sort-key-${index}`} value={index}>{item}</option>
                     })}
                 </select>
-            </div>
+            </div> */}
 
             <div>
                 <label
                     htmlFor="gernerationxx"
-                    className="block mb-2 text-mb font-medium text-white">
-                    Select an option
+                    className="block mb-2 text-mb font-medium text-white ">
+                    Search
                 </label>
                 <input
                     {...fieldKeyword}

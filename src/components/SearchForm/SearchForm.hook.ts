@@ -98,7 +98,7 @@ const useSearchForm = () => {
     useEffect(() => {
         const data = filterPokemon(fetchPokemon.data, keyword, type, sort)
 
-        setPokemonList({
+        setFetchPokemonList({
             data: data,
             loading: false,
             error: null
