@@ -5,7 +5,7 @@ import HomePage from '@/pages/home'
 import DetailPage from '@/pages/detail'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   const router = createBrowserRouter([
     {
